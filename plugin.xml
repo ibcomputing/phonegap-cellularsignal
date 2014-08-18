@@ -27,7 +27,7 @@
 
     <config-file target="res/xml/config.xml" parent="/*">
       <feature name="IbcCellularSignal">
-        <param name="android-package" value="com.phonegap.plugins.IbcCellularSignal"/>
+        <param name="android-package" value="com.phonegap.plugins.cellularsignal.IbcCellularSignal"/>
       </feature>
     </config-file>
      
