@@ -86,4 +86,3 @@ public class IBCCellularSignal extends CordovaPlugin {
    
    
 }
-
