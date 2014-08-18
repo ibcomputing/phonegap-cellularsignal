@@ -1,4 +1,4 @@
-package com.phonegap.plugins.IbcCellularSignal;
+package com.phonegap.plugins.cellularsignal;
 
 import android.app.Activity;
 import android.content.IntentFilter;
