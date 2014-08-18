@@ -11,6 +11,10 @@
   </description>
 
   <license>MIT</license>
+
+  <js-module src="www/cellularsignal.js" name="cellularsignal">
+    <clobbers target="cellularsignal" />
+  </js-module>
   
   <repo>https://github.com/ibcomputing/phonegap-cellularsignal.git</repo>
 
