@@ -3,20 +3,22 @@ package uk.co.ibcomputing.phonegap.plugins.cellularsignal;
 import org.json.JSONArray;
 import org.json.JSONException;
 
-import org.apache.cordova.api.CallbackContext;
-import org.apache.cordova.api.CordovaPlugin;
+import android.content.pm.PackageManager;
+import org.apache.cordova.CallbackContext;
+import org.apache.cordova.CordovaPlugin;
+import org.apache.cordova.PluginResult;
 
 import android.content.Context;
 import android.telephony.PhoneStateListener;
 import android.telephony.SignalStrength;
 import android.telephony.TelephonyManager;
 
-public class Cellularsignal extends CordovaPlugin {
+public class cellularsignal extends CordovaPlugin {
     
 	PhoneStateListener phoneStateListener;
 	String callback;
 	
-    public Cellularsignal() {
+    public cellularsignal() {
             this.phoneStateListener = new PhoneStateListener() {
                     @Override
                     public void onSignalStrengthsChanged(SignalStrength signalStrength)
@@ -83,3 +85,4 @@ public class Cellularsignal extends CordovaPlugin {
     }
    
 }
+
