@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        id="uk.co.ibcomputing.phonegap.plugins.cellularsignal"
+        version="0.1.0">
+
+  <name>Cellular Signal</name>
+
+  <description>
+    PhoneGap Plugin for tracking changes to device's cellular signal level
+  </description>
+
+  <license>MIT</license>
+  
+  <repo>https://github.com/ibcomputing/phonegap-cellularsignal.git</repo>
+
+  <engines>
+    <engine name="cordova" version=">=3.3.0"/>
+  </engines>
+
+  <!-- android -->
+  <platform name="android">
+
+    <config-file target="res/xml/config.xml" parent="/*">
+      <feature name="cellularsignal">
+        <param name="android-package" value="uk.co.ibcomputing.phonegap.plugins.cellularsignal"/>
+      </feature>
+    </config-file>
+     
+    <source-file src="src/android/com/phonegap/plugins/cellularsignal/cellularsignal.java" target-dir="src/com/phonegap/plugins/cellularsignal" />
+    
+  </platform>
+
+</plugin>
