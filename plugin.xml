@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
         xmlns:android="http://schemas.android.com/apk/res/android"
-        id="com.phonegap.plugins.CellularSignal"
+        id="com.phonegap.plugins.IbcCellularSignal"
         version="0.1.0">
 
   <name>Cellular Signal</name>
@@ -26,12 +26,12 @@
   <platform name="android">
 
     <config-file target="res/xml/config.xml" parent="/*">
-      <feature name="CellularSignal">
-        <param name="android-package" value="com.phonegap.plugins.CellularSignal"/>
+      <feature name="IbcCellularSignal">
+        <param name="android-package" value="com.phonegap.plugins.IbcCellularSignal"/>
       </feature>
     </config-file>
      
-    <source-file src="src/android/com/phonegap/plugins/cellularsignal/CellularSignal.java" target-dir="src/com/phonegap/plugins/cellularsignal" />
+    <source-file src="src/android/com/phonegap/plugins/cellularsignal/IbcCellularSignal.java" target-dir="src/com/phonegap/plugins/cellularsignal" />
     
   </platform>
 
