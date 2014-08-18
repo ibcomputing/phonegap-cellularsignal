@@ -31,5 +31,14 @@ var Cellsignal = function() {};
 	};
 	
 
-module.exports = Cellularsignal;
-module.exports = Cellsignal;
+if (!window.plugins) {
+    window.plugins = {};
+}
+if (!window.plugins.cellularsignal) {
+    window.plugins.cellularsignal = new Cellularsignal();
+}
+
+if (module.exports) {
+    module.exports = Cellularsignal;
+    module.exports = Cellsignal;
+}
