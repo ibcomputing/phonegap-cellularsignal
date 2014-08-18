@@ -1,4 +1,4 @@
-package com.phonegap.plugins.cellularsignal;
+package com.phonegap.plugins.CellularSignal;
  
 import android.app.Activity;
 import android.content.IntentFilter;
@@ -14,7 +14,7 @@ import android.telephony.TelephonyManager;
 import org.json.JSONArray;
 import org.json.JSONException;
 
-public class cellularsignal extends CordovaPlugin {
+public class CellularSignal extends CordovaPlugin {
     
 	@Override
 	public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
