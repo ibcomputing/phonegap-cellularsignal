@@ -31,3 +31,5 @@ var Cellsignal = function() {};
 	};
 	
 
+module.exports = Cellularsignal;
+module.exports = Cellsignal;
