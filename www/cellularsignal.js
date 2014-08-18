@@ -9,7 +9,7 @@ var cellularsignal = function() {};
 		    alert('plugin enable failure');
 		    //fail(args);
 		    console.log(args);
-		}, 'cellularsignal', 'enable', [params]);
+		}, 'IbcCellularSignal', 'enable', [params]);
 	};
 	
 	cellularsignal.prototype.disable = function(params, success, fail) {
@@ -17,7 +17,7 @@ var cellularsignal = function() {};
 			success(args);
 		}, function(args) {
 			fail(args);
-		}, 'cellularsignal', 'disable', [params]);
+		}, 'IbcCellularSignal', 'disable', [params]);
 	};	   
 	
 var Cellsignal = function() {};
@@ -52,4 +52,3 @@ var Cellsignal = function() {};
 	}
 	
 	
-
