@@ -1,25 +1,39 @@
 package uk.co.ibcomputing.phonegap.plugins.cellularsignal;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-
+import android.app.Activity;
+import android.content.IntentFilter;
 import android.content.pm.PackageManager;
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaPlugin;
-import org.apache.cordova.PluginResult;
 
 import android.content.Context;
 import android.telephony.PhoneStateListener;
 import android.telephony.SignalStrength;
 import android.telephony.TelephonyManager;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+
 public class cellularsignal extends CordovaPlugin {
     
-	PhoneStateListener phoneStateListener;
+	@Override
+	public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
+    	
+        if (action.equals("enable")) {
+        	callback = args.getJSONObject(0).getString("success");
+        	startListen();
+        } 
+        if(action.equals("disable")) {
+           stopListen();
+        }
+
+        return true;
+    }
+
 	String callback;
 	
-    public cellularsignal() {
-            this.phoneStateListener = new PhoneStateListener() {
+    
+      PhoneStateListener phoneStateListener = new PhoneStateListener() {
                     @Override
                     public void onSignalStrengthsChanged(SignalStrength signalStrength)
                     {
@@ -37,7 +51,7 @@ public class cellularsignal extends CordovaPlugin {
                             updateSignalStrength(strengthDbm);
                     }
             };
-    }
+    
    
     private void updateSignalStrength(int strengthDbm) {
         this.webView.sendJavascript(callback+"(" + strengthDbm + ")");  
@@ -70,19 +84,6 @@ public class cellularsignal extends CordovaPlugin {
             telephonyManager.listen(phoneStateListener, PhoneStateListener.LISTEN_NONE);
     }
    
-    @Override
-	public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
-    	
-        if (action.equals("enable")) {
-        	callback = args.getJSONObject(0).getString("success");
-        	startListen();
-        } 
-        if(action.equals("disable")) {
-           stopListen();
-        }
-
-        return true;
-    }
    
 }
 
