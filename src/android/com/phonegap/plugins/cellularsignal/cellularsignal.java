@@ -1,5 +1,5 @@
-package uk.co.ibcomputing.phonegap.plugins.cellularsignal;
-
+package com.phonegap.plugins.cellularsignal;
+ 
 import android.app.Activity;
 import android.content.IntentFilter;
 import android.content.pm.PackageManager;
