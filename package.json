@@ -1,0 +1,20 @@
+{
+    "name": "com.phonegap.plugins.IbcCellularSignal",
+    "version": "0.1.0",
+    "description": "PhoneGap Plugin for tracking changes to device's cellular signal level",
+    "main": "",
+    "scripts": {
+        
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ibcomputing/phonegap-cellularsignal.git"
+    },
+    "keywords": [],
+    "author": "IB Computing",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/ibcomputing/phonegap-cellularsignal/issues"
+    },
+    "homepage": "https://github.com/ibcomputing/phonegap-cellularsignal#readme"
+}
